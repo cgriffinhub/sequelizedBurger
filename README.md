@@ -1,0 +1,2 @@
+# sequelizedBurger
+App using Sequelize
