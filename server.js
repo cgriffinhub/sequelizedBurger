@@ -1,7 +1,7 @@
 var express = require("express");
 var db = require("./models");
 var bodyParser = require("body-parser");
-var port = process.env.PORT || 8000;
+var PORT = process.env.PORT || 5000;
 var app = express();
 
 var db = require("./models");
@@ -26,8 +26,9 @@ app.use(routes);
 
 //Syncing our sequelize models and then starting our express app
 db.sequelize.sync().then(function(){
-	app.listen(port, function() {
-		console.log("App is running on port " + port);
-	});
+	app.listen(PORT, function() {
+		console.log("App listening on PORT " + PORT);
+	  });
+
 	
 });
